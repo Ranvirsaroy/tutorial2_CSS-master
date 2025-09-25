@@ -42,16 +42,16 @@ h2{
    font-size: 1.5em;
 }
 h1,h2{
-   font-family: Quicksand,Geneva, Verdana, Geneva, sans-serif;
+   font-family: Quicksand, Verdana, Geneva, sans-serif;
 }
 article#about_tss h1{
    color: white;
    background-color: rgb(222,128,60);
 }
 
-article#about_tss h1{
+article#about_tss h2{
    color: white;
-   background-color: rgb(235,177,60);
+   background-color: rgb(235,177,131);
 }
 
 article.syllabus h1, article.syllabus h2{
@@ -60,7 +60,7 @@ article.syllabus h1, article.syllabus h2{
 }
 
 article.syllabus ol{
-   list-style-type: upper-alpha;
+   list-style-type: upper-roman;
 }
 article.syllabus ol ol{
    list-style-type: upper-alpha;
@@ -68,6 +68,7 @@ article.syllabus ol ol{
 article.syllabus ol ol ol{
    list-style-type: decimal;
 }
+article#about
 
 
 /* Aside and Blockquote Styles */
@@ -78,6 +79,18 @@ aside{
 aside blockquote{
    color: rgb(232,165,116);
    margin: 20px 5px;
+}
+aside blockquote::before{
+   content: open-quote;
+   font-family:'Time New Roman',Times, serif;
+   font-size: 1.6em;
+   font-weight:bold;
+}
+aside blockquote::after{
+   content: close-quote;
+   font-family:'Time New Roman',Times, serif;
+   font-size: 1.6em;
+   font-weight:bold;
 }
 
 
@@ -99,20 +112,38 @@ nav > ul > li.newgroup {
    margin-top: 20px;
 }
 
+nav > ul > li >a:hover, nav > ul > li > a:active{
+   color: rgb(255,64,255);
+   text-decoration: underline;
+}
 
+ nav > ul > li >a:hover, nav > ul > li > a:visited{
+   color: rgb(151,151,151);
+   text-decoration: none;
+}
 
- 
 /* List Styles */
 article#about_tss ul{
    list-style-image: url(runicon.png);
 }
 
+/*using structral pseudo-class*/
+article#about_tss ul li:nth-of-type(2){
+   list-style-image: url(bikeicon.png);
+}
 
+article#about_tss ul li:last-of-type(2){
+   list-style-image: url(swimicon.png);
+}
 
 
 /* Footer Styles */
-
-
+footer{
+   display: flex;
+   justify-content: center; /* horizontally center */
+   align-items: center;  /* vertically center */
+   padding: 20px;
+}
 
 
 
